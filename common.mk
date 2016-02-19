@@ -182,11 +182,7 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
-# Selective SPN list for operator number who has the problem.
-PRODUCT_COPY_FILES += \
-    vendor/cardinal/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
-
-# Overlays & Include LatinIME dictionaries
+# Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
 	vendor/cardinal/overlay/common
 
