@@ -118,6 +118,11 @@ PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Stk
 
+# SuperSU
+PRODUCT_COPY_FILES += \
+   vendor/cardinal/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+   vendor/cardinal/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+
 # Mms depends on SoundRecorder for recorded audio messages
 PRODUCT_PACKAGES += \
     SoundRecorder
@@ -129,6 +134,14 @@ PRODUCT_COPY_FILES += \
 # Selective SPN list for operator number who has the problem.
 PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
+
+# MiXplorer
+PRODUCT_COPY_FILES += \
+vendor/cardinal/prebuilt/common/app/MiXplorer/mixplorer.apk:system/app/MiXplorer/mixplorer.apk \
+vendor/cardinal/prebuilt/common/bin/72-mixplorer.sh:system/addon.d/72-mixplorer.sh
+
+# easy way to extend to add more packages
+-include vendor/extra/product.mk
 
 # Overlays & Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += \
