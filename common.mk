@@ -115,7 +115,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Telephony packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
-    Stk
+    Stk \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Mms depends on SoundRecorder for recorded audio messages
 PRODUCT_PACKAGES += \
