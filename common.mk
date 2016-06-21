@@ -164,6 +164,7 @@ PRODUCT_PACKAGES += \
     Camera2 \
     Launcher3 \
     Browser \
+    CardinalOTA
 
 # Version
 ing System
