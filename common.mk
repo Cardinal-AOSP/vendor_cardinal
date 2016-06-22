@@ -177,13 +177,13 @@ PRODUCT_PACKAGES += \
     Camera2 \
     Launcher3 \
     Browser \
-    CardinalOTA
+    CardinalOTA \
+    AudioFX
 
-# Version
-ing System
+# Versioning System
 # Cardinal-AOSP first version.
 PRODUCT_VERSION_MAJOR = 6.0.1
-PRODUCT_VERSION_MINOR = 2.1
+PRODUCT_VERSION_MINOR = 2.2
 PRODUCT_VERSION_MAINTENANCE = BETA
 ifdef Cardinal_BUILD_EXTRA
     CARDINAL_POSTFIX := -$(CARDINAL_BUILD_EXTRA)
