@@ -23,4 +23,4 @@
 LOCAL_PATH := $(call my-dir)
 
 # Include UBER common configuration
-include vendor/tipsy/config/uber.mk
+include vendor/cardinal/config/uber.mk
