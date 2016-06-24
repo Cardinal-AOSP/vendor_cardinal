@@ -205,7 +205,7 @@ ifeq ($(CARDINAL_BUILD_TYPE),DM)
 endif
 
 ifndef CARDINAL_POSTFIX
-    CARDINAL_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+    CARDINAL_POSTFIX := -$(shell date +"%Y%m%d")
 endif
 
 PLATFORM_VERSION_CODENAME := $(CARDINAL_BUILD_TYPE)
