@@ -59,6 +59,10 @@ PRODUCT_COPY_FILES +=  \
     vendor/cardinal/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/cardinal/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
+# Include librsjni explicitly to workaround GMS issue
+PRODUCT_PACKAGES += \
+    librsjni	
+	
 # SuperSU
 PRODUCT_COPY_FILES += \
    vendor/cardinal/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
