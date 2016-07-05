@@ -182,7 +182,8 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     Browser \
     CardinalOTA \
-    AudioFX
+    AudioFX \
+    Chromium
 
 # Versioning System
 # Cardinal-AOSP first version.
