@@ -173,6 +173,7 @@ PRODUCT_PACKAGES += \
 
 # CARDINAL INCLUDES
 PRODUCT_PACKAGES += \
+    Calendar \
     Eleven \
     Camera2 \
     Launcher3 \
