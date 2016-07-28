@@ -218,5 +218,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     cardinal.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.cardinal.version=$(CARDINAL_VERSION) \
-    ro.modversion=$(CARDINLA_MOD_VERSION) \
+    ro.modversion=$(CARDINAL_MOD_VERSION) \
     ro.cardinal.buildtype=$(CARDINAL_BUILD_TYPE)
