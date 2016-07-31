@@ -59,15 +59,15 @@ PRODUCT_COPY_FILES +=  \
     vendor/cardinal/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/cardinal/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
+# Substratum Theme Engine
+PRODUCT_COPY_FILES += \
+   vendor/cardinal/prebuilt/common/app/Substratum/substratum.apk:system/app/Substratum/substratum.apk
+
 # SuperSU
 PRODUCT_COPY_FILES += \
    vendor/cardinal/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
    vendor/cardinal/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
    
-# Layers Manager
-PRODUCT_COPY_FILES += \
-vendor/cardinal/prebuilt/common/app/LayersManager/layersmanager.apk:system/app/LayersManager/layersmanager.apk
-
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
@@ -135,11 +135,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
-# MiXplorer
-PRODUCT_COPY_FILES += \
-vendor/cardinal/prebuilt/common/app/MiXplorer/mixplorer.apk:system/app/MiXplorer/mixplorer.apk \
-vendor/cardinal/prebuilt/common/bin/72-mixplorer.sh:system/addon.d/72-mixplorer.sh
-
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
@@ -184,7 +179,7 @@ PRODUCT_PACKAGES += \
 # Versioning System
 # Cardinal-AOSP first version.
 PRODUCT_VERSION_MAJOR = 6.0.1
-PRODUCT_VERSION_MINOR = 2.4
+PRODUCT_VERSION_MINOR = 2.5
 PRODUCT_VERSION_MAINTENANCE = STABLE
 ifdef Cardinal_BUILD_EXTRA
     CARDINAL_POSTFIX := -$(CARDINAL_BUILD_EXTRA)
