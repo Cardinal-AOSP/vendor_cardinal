@@ -59,10 +59,6 @@ PRODUCT_COPY_FILES +=  \
     vendor/cardinal/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/cardinal/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
-# Substratum Theme Engine
-PRODUCT_COPY_FILES += \
-   vendor/cardinal/prebuilt/common/app/Substratum/substratum.apk:system/app/Substratum/substratum.apk
-
 # SuperSU
 PRODUCT_COPY_FILES += \
    vendor/cardinal/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
@@ -174,7 +170,8 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     Browser \
     CardinalOTA \
-    AudioFX
+    AudioFX \
+    Substratum
 
 # Versioning System
 # Cardinal-AOSP first version.
