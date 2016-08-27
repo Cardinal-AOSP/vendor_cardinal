@@ -132,12 +132,12 @@ PRODUCT_PACKAGES += \
 
 # CARDINAL INCLUDES
 PRODUCT_PACKAGES += \
-  	Calendar \
+    Calendar \
     Camera2 \
     Launcher3 \
     Browser \
-		messaging \
-		masquerade
+    messaging \
+    masquerade
 
 # SuperSU
 PRODUCT_COPY_FILES += \
@@ -218,3 +218,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cardinal.version=$(CARDINAL_VERSION) \
     ro.modversion=$(CARDINAL_MOD_VERSION) \
     ro.cardinal.buildtype=$(CARDINAL_BUILD_TYPE)
+
+# DU Utils Library
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
