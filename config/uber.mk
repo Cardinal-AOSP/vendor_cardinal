@@ -16,7 +16,11 @@ AND_TC_DATE := $(filter 20150% 20151% 20160% 20161%,$(AND_TC_VERSION))
 ifneq ($(filter (UBERTC%),$(AND_TC_VERSION)),)
   AND_TC_NAME := UBERTC
 else
+ifneq ($(filter (Linaro%),$(AND_TC_VERSION)),)
+  AND_TC_NAME := LINARO
+else
   AND_TC_NAME := GCC
+endif
 endif
 ifeq (,$(AND_TC_DATE))
   ARM_AND_PROP := $(AND_TC_NAME)-$(AND_TC_VERSION_NUMBER)
@@ -38,7 +42,11 @@ KERNEL_TC_DATE := $(filter 20150% 20151% 20160% 20161%,$(KERNEL_TC_VERSION))
 ifneq ($(filter (UBERTC%),$(KERNEL_TC_VERSION)),)
   KERNEL_TC_NAME := UBERTC
 else
+ifneq ($(filter (Linaro%),$(KERNEL_TC_VERSION)),)
+  KERNEL_TC_NAME := LINARO
+else
   KERNEL_TC_NAME := GCC
+endif
 endif
 ifeq (,$(KERNEL_TC_DATE))
   ARM_KERNEL_PROP := $(KERNEL_TC_NAME)-$(KERNEL_TC_VERSION_NUMBER)
@@ -51,14 +59,22 @@ endif
 
 ifeq (arm64,$(TARGET_ARCH))
 # AARCH64 ROM TOOLCHAIN INFO
+ifneq ($(TARGET_GCC_VERSION_ARM64_ROM),)
+UBER_AND_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/aarch64/aarch64-linux-android-$(TARGET_GCC_VERSION_ARM64_ROM)
+else
 UBER_AND_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/aarch64/aarch64-linux-android-4.9
+endif
 UBER_AND := $(shell $(UBER_AND_PATH)/bin/aarch64-linux-android-gcc --version)
 UBER_AND_VERSION_NUMBER := $(shell $(UBER_AND_PATH)/bin/aarch64-linux-android-gcc -dumpversion 2>&1)
 UBER_AND_DATE := $(filter 20150% 20151% 20160% 20161%,$(UBER_AND))
 ifneq ($(filter (UBERTC%),$(UBER_AND)),)
   UBER_AND_NAME := UBERTC
+else 
+ifneq ($(filter (Linaro%),$(UBER_AND)),)
+  UBER_AND_NAME := Linaro
 else
   UBER_AND_NAME := GCC
+endif
 endif
 ifeq (,$(UBER_AND_DATE))
   AARCH64_AND_PROP := $(UBER_AND_NAME)-$(UBER_AND_VERSION_NUMBER)
@@ -80,8 +96,13 @@ UBER_TC_DATE := $(filter 20150% 20151% 20160% 20161%,$(UBER_TC_VERSION))
 ifneq ($(filter (UBERTC%),$(UBER_TC_VERSION)),)
   UBER_TC_NAME := UBERTC
 else
+ifneq ($(filter (Linaro%),$(UBER_TC_VERSION)),)
+  UBER_TC_NAME := Linaro
+else
   UBER_TC_NAME := GCC
 endif
+endif
+
 ifeq (,$(UBER_TC_DATE))
   AARCH64_KERNEL_PROP := $(UBER_TC_NAME)-$(UBER_TC_VERSION_NUMBER)
 else
