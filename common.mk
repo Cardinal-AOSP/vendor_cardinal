@@ -152,6 +152,10 @@ PRODUCT_PACKAGE_OVERLAYS += \
 	vendor/cardinal/overlay/common \
 	vendor/cardinal/overlay/dictionaries
 
+# Include librsjni explicitly to workaround GMS issue
+PRODUCT_PACKAGES += \
+    librsjni
+
 # Proprietary latinime libs needed for Keyboard swyping
 ifneq ($(filter arm64,$(TARGET_ARCH)),)
 PRODUCT_COPY_FILES += \
