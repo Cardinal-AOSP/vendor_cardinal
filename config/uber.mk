@@ -128,7 +128,25 @@ endif
 ifeq (true,$(CLANG_O3))
   OPT5 := (clang_O3)
 endif
-GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)$(OPT5)
+ifeq (true,$(ENABLE_SANITIZE))
+  OPT6 := (sanitize)
+endif
+ifeq (true,$(POLLY_OPTIMIZATION))
+  OPT7 := (poly_opts)
+endif
+ifeq (true,$(ENABLE_PTHREAD))
+  OPT8 := (pthread)
+endif
+ifeq (true,$(ENABLE_IPA_ANALYSER))
+  OPT9 := (ipa_analyser)
+endif
+ifeq (true,$(ENABLE_GOMP))
+  OPT10 := (gomp)
+endif
+ifeq (true,$(ENABLE_EXTRAGCC))
+  OPT11 := (extragcc)
+endif
+GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)$(OPT5)$(OPT6)$(OPT7)$(OPT8)$(OPT9)$(OPT10)$(OPT11)
 ifneq (,$(GCC_OPTIMIZATION_LEVELS))
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.uber.flags=$(GCC_OPTIMIZATION_LEVELS)
