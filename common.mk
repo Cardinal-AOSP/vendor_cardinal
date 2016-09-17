@@ -60,8 +60,8 @@ PRODUCT_COPY_FILES +=  \
     vendor/cardinal/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # Substratum Theme Engine
-PRODUCT_COPY_FILES += \
-   vendor/cardinal/prebuilt/common/app/Substratum/substratum.apk:system/app/Substratum/substratum.apk
+#PRODUCT_COPY_FILES += \
+#   vendor/cardinal/prebuilt/common/app/Substratum/substratum.apk:system/app/Substratum/substratum.apk
 
 # SuperSU
 PRODUCT_COPY_FILES += \
@@ -100,8 +100,8 @@ PRODUCT_PACKAGES += \
     micro_bench \
     oprofiled \
     sqlite3 \
-    strace \
-    masquerade
+    strace
+    #masquerade
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
