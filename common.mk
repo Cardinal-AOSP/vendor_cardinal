@@ -59,15 +59,6 @@ PRODUCT_COPY_FILES +=  \
     vendor/cardinal/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/cardinal/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
-# Substratum Theme Engine
-#PRODUCT_COPY_FILES += \
-#   vendor/cardinal/prebuilt/common/app/Substratum/substratum.apk:system/app/Substratum/substratum.apk
-
-# SuperSU
-PRODUCT_COPY_FILES += \
-   vendor/cardinal/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-   vendor/cardinal/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
@@ -101,7 +92,6 @@ PRODUCT_PACKAGES += \
     oprofiled \
     sqlite3 \
     strace
-    #masquerade
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
@@ -127,14 +117,23 @@ PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Stk
 
+# Mms depends on SoundRecorder for recorded audio messages
+PRODUCT_PACKAGES += \
+    SoundRecorder
+
+# CARDINAL INCLUDES
+PRODUCT_PACKAGES += \
+  	Calendar \
+    Camera2 \
+    Launcher3 \
+    Browser \
+		messaging \
+		masquerade 
+
 # SuperSU
 PRODUCT_COPY_FILES += \
    vendor/cardinal/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
    vendor/cardinal/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-
-# Mms depends on SoundRecorder for recorded audio messages
-PRODUCT_PACKAGES += \
-    SoundRecorder
 
 # World APN list
 PRODUCT_COPY_FILES += \
@@ -152,10 +151,6 @@ PRODUCT_PACKAGE_OVERLAYS += \
 	vendor/cardinal/overlay/common \
 	vendor/cardinal/overlay/dictionaries
 
-# Include librsjni explicitly to workaround GMS issue
-PRODUCT_PACKAGES += \
-    librsjni
-
 # Proprietary latinime libs needed for Keyboard swyping
 ifneq ($(filter arm64,$(TARGET_ARCH)),)
 PRODUCT_COPY_FILES += \
@@ -168,7 +163,6 @@ endif
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
-
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
@@ -176,21 +170,11 @@ endif
 
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
-PRODUCT_PACKAGES += \
-	messaging
-
-# CARDINAL INCLUDES
-PRODUCT_PACKAGES += \
-	Calendar \
-    Camera2 \
-    Launcher3 \
-    Browser \
-
 # Versioning System
 # Cardinal-AOSP first version.
-PRODUCT_VERSION_MAJOR = 6.0.1
+PRODUCT_VERSION_MAJOR = 7.0.0
 PRODUCT_VERSION_MINOR = 4.0
-PRODUCT_VERSION_MAINTENANCE = STAGING
+PRODUCT_VERSION_MAINTENANCE = BETA
 ifdef Cardinal_BUILD_EXTRA
     CARDINAL_POSTFIX := -$(CARDINAL_BUILD_EXTRA)
 endif
