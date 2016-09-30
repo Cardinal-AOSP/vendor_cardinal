@@ -188,7 +188,8 @@ PRODUCT_PACKAGES += \
     Browser \
     CardinalOTA \
     AudioFX \
-		FMRadio
+		FMRadio \
+		LiveWallpapersPicker
 
 # DU Utils Library
 PRODUCT_PACKAGES += \
