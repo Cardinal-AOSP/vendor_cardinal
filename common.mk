@@ -187,7 +187,8 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     Browser \
     CardinalOTA \
-    AudioFX
+    AudioFX \
+		FMRadio
 
 # DU Utils Library
 PRODUCT_PACKAGES += \
