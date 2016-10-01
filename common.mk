@@ -181,14 +181,11 @@ PRODUCT_PACKAGES += \
 
 # CARDINAL INCLUDES
 PRODUCT_PACKAGES += \
-	Calendar \
-    Eleven \
     Camera2 \
     Launcher3 \
     Browser \
     CardinalOTA \
     AudioFX \
-		FMRadio \
 		LiveWallpapersPicker
 
 # DU Utils Library
