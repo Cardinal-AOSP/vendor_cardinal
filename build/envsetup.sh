@@ -122,6 +122,11 @@ function losremote()
     proj="$(pwd -P | sed "s#$ANDROID_BUILD_TOP/##g")"
     pfx="android_"
     project="${proj//\//_}"
+
+    if (echo "$project" | egrep -q 'display-caf|audio-caf|media-caf|ril-caf|wlan-caf|bt-caf') ; then
+        project=${project%-caf*}
+    fi
+
     git remote add los "git@github.com:LineageOS/$pfx$project"
     echo "Remote 'los' created"
 }
