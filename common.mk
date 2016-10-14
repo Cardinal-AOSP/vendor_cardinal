@@ -16,7 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
-TARGET_BOOTANIMATION_480P := $(shell \
+TARGET_BOOTANIMATION_400 := $(shell \
   if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
     echo 'true'; \
   else \
@@ -24,12 +24,17 @@ TARGET_BOOTANIMATION_480P := $(shell \
   fi )
 
 # Bootanimation
-ifeq ($(TARGET_BOOTANIMATION_480P),true)
+ifeq ($(TARGET_BOOTANIMATION_400),true)
 PRODUCT_COPY_FILES += \
-    vendor/cardinal/prebuilt/common/media/bootanimation-480p.zip:system/media/bootanimation.zip
+    vendor/cardinal/prebuilt/common/media/bootanimation-400.zip:system/media/bootanimation.zip
+else
+ifeq ($(TARGET_BOOTANIMATION_1200),true)
+PRODUCT_COPY_FILES += \
+    vendor/cardinal/prebuilt/common/media/bootanimation-1200.zip:system/media/bootanimation.zip
 else
 PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+endif
 endif
 
 # Backup Tool
@@ -132,7 +137,7 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     Browser \
 		messaging \
-		masquerade 
+		masquerade
 
 # SuperSU
 PRODUCT_COPY_FILES += \
