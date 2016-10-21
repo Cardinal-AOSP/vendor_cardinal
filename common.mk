@@ -45,7 +45,6 @@ PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/bin/whitelist:system/addon.d/whitelist \
     vendor/cardinal/prebuilt/common/addon.d/71-layers.sh:system/addon.d/71-layers.sh
 
-
 # Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cardinal/overlay/dictionaries
 
@@ -137,6 +136,7 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     Browser \
     messaging \
+    Substratum \
     masquerade
 
 # SuperSU
