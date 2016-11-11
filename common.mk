@@ -211,3 +211,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cardinal.version=$(PRODUCT_VERSION_MINOR) \
     ro.modversion=$(CARDINAL_MOD_VERSION) \
     ro.cardinal.buildtype=$(CARDINAL_BUILD_TYPE)
+
+ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
+  PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.device.cache_dir=/data/cache
+else
+  PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.device.cache_dir=/cache
+endif
