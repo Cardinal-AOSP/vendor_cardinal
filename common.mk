@@ -100,6 +100,7 @@ PRODUCT_PACKAGES += \
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full \
     librsjni
 
 # Custom off-mode charger
