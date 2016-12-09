@@ -182,7 +182,7 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 # Versioning System
 # Cardinal-AOSP first version.
 PRODUCT_VERSION_MAJOR = 7.0.0
-PRODUCT_VERSION_MINOR = 4.0
+PRODUCT_VERSION_MINOR = 4.1
 PRODUCT_VERSION_MAINTENANCE = BETA
 ifdef Cardinal_BUILD_EXTRA
     CARDINAL_POSTFIX := -$(CARDINAL_BUILD_EXTRA)
