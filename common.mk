@@ -95,7 +95,8 @@ PRODUCT_PACKAGES += \
     oprofiled \
     sqlite3 \
     strace \
-		libbthost_if
+		libbthost_if \
+		WallpaperPicker
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
