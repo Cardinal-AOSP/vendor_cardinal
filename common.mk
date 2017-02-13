@@ -94,7 +94,8 @@ PRODUCT_PACKAGES += \
     micro_bench \
     oprofiled \
     sqlite3 \
-    strace
+    strace \
+		libbthost_if
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
