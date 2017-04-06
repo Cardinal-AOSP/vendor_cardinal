@@ -152,7 +152,8 @@ PRODUCT_PACKAGES += \
     messaging \
     Jelly \
     CardinalOTA \
-    ExactCalculator
+    ExactCalculator \
+    Turbo
 
 # World APN list
 PRODUCT_COPY_FILES += \
