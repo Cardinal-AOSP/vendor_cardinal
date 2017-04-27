@@ -42,8 +42,7 @@ PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/cardinal/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/cardinal/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
-    vendor/cardinal/prebuilt/common/bin/whitelist:system/addon.d/whitelist \
-    vendor/cardinal/prebuilt/common/addon.d/71-layers.sh:system/addon.d/71-layers.sh
+    vendor/cardinal/prebuilt/common/bin/whitelist:system/addon.d/whitelist
 
 # Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cardinal/overlay/dictionaries
@@ -131,19 +130,9 @@ PRODUCT_PACKAGES += \
 
 # CARDINAL INCLUDES
 PRODUCT_PACKAGES += \
-    Calendar \
     Camera2 \
     Launcher3 \
-    SnapdragonGallery \
-    Browser \
-    messaging \
-    Substratum \
-    masquerade
-
-# SuperSU
-PRODUCT_COPY_FILES += \
-   vendor/cardinal/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-   vendor/cardinal/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+    messaging
 
 # World APN list
 PRODUCT_COPY_FILES += \
@@ -181,21 +170,18 @@ endif
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
 # Versioning System
-# Cardinal-AOSP first version.
-PRODUCT_VERSION_MAJOR = 7.0.0
-PRODUCT_VERSION_MINOR = 4.1
-PRODUCT_VERSION_MAINTENANCE = BETA
-ifdef Cardinal_BUILD_EXTRA
+# Cardinal-AOSP version.
+PRODUCT_VERSION_MAJOR = NOUGAT-MR2
+PRODUCT_VERSION_MINOR = 4.5
+ifdef CARDINAL_BUILD_EXTRA
     CARDINAL_POSTFIX := -$(CARDINAL_BUILD_EXTRA)
 endif
 ifndef CARDINAL_BUILD_TYPE
 ifeq ($(CARDINAL_RELEASE),true)
     CARDINAL_BUILD_TYPE := OFFICIAL
-    PLATFORM_VERSION_CODENAME := OFFICIAL
     CARDINAL_POSTFIX := -$(shell date +"%Y%m%d")
 else
-    CARDINAL_BUILD_TYPE := UNOFFICIAL
-    PLATFORM_VERSION_CODENAME := UNOFFICIAL
+    CARDINAL_BUILD_TYPE := $(USER)
     CARDINAL_POSTFIX := -$(shell date +"%Y%m%d")
 endif
 endif
@@ -208,20 +194,14 @@ ifndef CARDINAL_POSTFIX
     CARDINAL_POSTFIX := -$(shell date +"%Y%m%d")
 endif
 
-PLATFORM_VERSION_CODENAME := $(CARDINAL_BUILD_TYPE)
+PLATFORM_VERSION_CODENAME := NOUGAT
 
 # Set all versions
-CARDINAL_VERSION := Cardinal-AOSP-$(PRODUCT_VERSION_MINOR)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
-CARDINAL_MOD_VERSION := Cardinal-AOSP-$(PRODUCT_VERSION_MINOR)-$(CARDINAL_BUILD)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
+CARDINAL_VERSION := Cardinal-AOSP-$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAJOR)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
+CARDINAL_MOD_VERSION := Cardinal-AOSP-$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAJOR)-$(CARDINAL_BUILD)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     cardinal.ota.version=$(CARDINAL_MOD_VERSION) \
     ro.cardinal.version=$(CARDINAL_VERSION) \
     ro.modversion=$(CARDINAL_MOD_VERSION) \
     ro.cardinal.buildtype=$(CARDINAL_BUILD_TYPE)
-
-# DU Utils Library
-PRODUCT_BOOT_JARS += \
-    org.dirtyunicorns.utils
-PRODUCT_PACKAGES += \
-    org.dirtyunicorns.utils
