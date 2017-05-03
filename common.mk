@@ -126,13 +126,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Stk \
-    telephony-ext \
-		rcscommon \
-		rcscommon.xml
+    telephony-ext
 
 PRODUCT_BOOT_JARS += \
-    telephony-ext \
-    rcscommon
+    telephony-ext
 
 # Mms depends on SoundRecorder for recorded audio messages
 PRODUCT_PACKAGES += \
