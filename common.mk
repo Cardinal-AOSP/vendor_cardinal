@@ -209,6 +209,6 @@ CARDINAL_MOD_VERSION := Cardinal-AOSP-$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     cardinal.ota.version=$(CARDINAL_MOD_VERSION) \
-    ro.cardinal.version=$(CARDINAL_VERSION) \
+    ro.cardinal.version=$(PRODUCT_VERSION_MINOR) \
     ro.modversion=$(CARDINAL_MOD_VERSION) \
     ro.cardinal.buildtype=$(CARDINAL_BUILD_TYPE)
