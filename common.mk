@@ -12,6 +12,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.sim_unlocked=1 \
     ro.com.google.ime.theme_id=5
 
+# Mark as eligible for Google Assistant
+PRODUCT_PROPERTY_OVERRIDES += ro.opa.eligible_device=true
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
