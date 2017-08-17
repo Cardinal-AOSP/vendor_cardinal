@@ -174,7 +174,7 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
 endif
 
 $(call inherit-product-if-exists, vendor/extra/product.mk)
