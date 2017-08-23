@@ -1,0 +1,7 @@
+bootstrap_go_package {
+    name: "soong-cardinal",
+    pkgPath: "cardinal/soong/android",
+    srcs: [
+        "android/variable.go",
+    ],
+}
