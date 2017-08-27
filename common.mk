@@ -58,7 +58,7 @@ PRODUCT_COPY_FILES += \
 
 # Init file
 PRODUCT_COPY_FILES += \
-    vendor/cardinal/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+    vendor/cardinal/prebuilt/common/etc/init.local.rc:root/init.cardinal.rc
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
@@ -98,8 +98,8 @@ PRODUCT_PACKAGES += \
     oprofiled \
     sqlite3 \
     strace \
-		libbthost_if \
-		WallpaperPicker
+	libbthost_if \
+	WallpaperPicker
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
@@ -177,8 +177,8 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 
 # Versioning System
 # Cardinal-AOSP version.
-PRODUCT_VERSION_MAJOR = NOUGAT-MR2
-PRODUCT_VERSION_MINOR = 4.5
+PRODUCT_VERSION_MAJOR = OREO
+PRODUCT_VERSION_MINOR = 5.0-STAGING
 ifdef CARDINAL_BUILD_EXTRA
     CARDINAL_POSTFIX := -$(CARDINAL_BUILD_EXTRA)
 endif
@@ -200,7 +200,7 @@ ifndef CARDINAL_POSTFIX
     CARDINAL_POSTFIX := -$(shell date +"%Y%m%d")
 endif
 
-PLATFORM_VERSION_CODENAME := NOUGAT
+PLATFORM_VERSION_CODENAME := OREO
 
 # Set all versions
 CARDINAL_VERSION := Cardinal-AOSP-$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAJOR)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
