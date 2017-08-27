@@ -8,8 +8,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
-    ro.com.android.dataroaming=false \
-    ro.telephony.sim_unlocked=1
+    ro.com.android.dataroaming=false
 
 # Mark as eligible for Google Assistant
 PRODUCT_PROPERTY_OVERRIDES += ro.opa.eligible_device=true
