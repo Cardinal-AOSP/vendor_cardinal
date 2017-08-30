@@ -4,4 +4,5 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/cardinal/sepolicy/qcom
+    vendor/cardinal/sepolicy/qcom/common \
+    vendor/cardinal/sepolicy/qcom/$(TARGET_BOARD_PLATFORM)
