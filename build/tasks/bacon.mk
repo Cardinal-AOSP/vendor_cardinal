@@ -16,7 +16,7 @@
 # -----------------------------------------------------------------
 # Cardinal-AOSL OTA update package
 
-CARDINAL_TARGET_PACKAGE := $(PRODUCT_OUT)/Cardinal-AOSP-$(CARDINAL_VERSION).zip
+CARDINAL_TARGET_PACKAGE := $(PRODUCT_OUT)/$(CARDINAL_MOD_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
