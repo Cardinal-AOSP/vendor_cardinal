@@ -146,6 +146,11 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Turbo
 
+# Themes
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    Stock
+
 # World APN list
 PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
