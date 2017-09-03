@@ -138,7 +138,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Camera2 \
     Launcher3 \
-    messaging
+    messaging \
+    Jelly
 
 # World APN list
 PRODUCT_COPY_FILES += \
