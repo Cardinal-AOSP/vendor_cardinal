@@ -13,6 +13,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Mark as eligible for Google Assistant
 PRODUCT_PROPERTY_OVERRIDES += ro.opa.eligible_device=true
 
+# RecueParty? No thanks.
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.enable_rescue=false
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
