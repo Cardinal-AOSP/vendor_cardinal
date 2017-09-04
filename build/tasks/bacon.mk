@@ -22,4 +22,8 @@ CARDINAL_TARGET_PACKAGE := $(PRODUCT_OUT)/$(CARDINAL_MOD_VERSION).zip
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CARDINAL_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(CARDINAL_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CARDINAL_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(CARDINAL_TARGET_PACKAGE)" >&2
+	@echo  "===============================-Package complete-==============================="
+	@echo  "Zip: " $(CARDINAL_TARGET_PACKAGE)
+	@echo  "MD5: "" `cat $(CARDINAL_TARGET_PACKAGE).md5sum | awk '{print $$1}' `"
+	@echo  "Size:"" `du -sh $(CARDINAL_TARGET_PACKAGE) | awk '{print $$1}' `"
+	@echo  "================================================================================"
