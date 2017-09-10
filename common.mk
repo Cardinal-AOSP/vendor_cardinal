@@ -53,6 +53,11 @@ PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
     vendor/cardinal/prebuilt/common/bin/whitelist:system/addon.d/whitelist
 
+
+# Dialer fix
+PRODUCT_COPY_FILES +=  \
+    vendor/cardinal/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+
 # Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cardinal/overlay/dictionaries
 
