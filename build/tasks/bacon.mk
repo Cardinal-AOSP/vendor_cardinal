@@ -14,6 +14,7 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
+
 # Add colors
 ifneq ($(BUILD_WITH_COLORS),0)
   CL_SGRY="\033[38;5;239m"
@@ -24,14 +25,12 @@ ifneq ($(BUILD_WITH_COLORS),0)
 endif
 
 # Cardinal-AOSP OTA update package
-
 CARDINAL_TARGET_PACKAGE := $(PRODUCT_OUT)/$(CARDINAL_MOD_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CARDINAL_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(CARDINAL_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CARDINAL_TARGET_PACKAGE).md5sum
-	@echo "done"
 	@echo -e ${CL_BLU}${CL_CYN}"===============================-Package complete-==============================="${CL_RST}
 	@echo -e ${CL_BLU}${CL_YLW}"Zip: "${CL_YLW} $(CARDINAL_TARGET_PACKAGE)${CL_RST}
 	@echo -e ${CL_BLU}${CL_YLW}"MD5: "${CL_YLW}" `cat $(CARDINAL_TARGET_PACKAGE).md5sum | awk '{print $$1}' `"${CL_RST}
