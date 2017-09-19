@@ -145,7 +145,8 @@ PRODUCT_PACKAGES += \
     Camera2 \
     Launcher3 \
     messaging \
-    Jelly
+    Jelly \
+    CardinalOTA
 
 # World APN list
 PRODUCT_COPY_FILES += \
