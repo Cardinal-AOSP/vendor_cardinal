@@ -146,7 +146,8 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     messaging \
     Jelly \
-    CardinalOTA
+    CardinalOTA \
+    ExactCalculator
 
 # World APN list
 PRODUCT_COPY_FILES += \
