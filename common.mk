@@ -87,9 +87,9 @@ PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/cardinal/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-# Init file
-PRODUCT_COPY_FILES += \
-    vendor/cardinal/prebuilt/common/etc/init.local.rc:root/init.cardinal.rc
+# Copy all Cardinal-specific init rc files
+$(foreach f,$(wildcard vendor/cardinal/prebuilt/common/etc/init/*.rc),\
+	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
