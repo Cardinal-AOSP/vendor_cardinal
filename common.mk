@@ -5,7 +5,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false \
@@ -53,7 +52,6 @@ PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
     vendor/cardinal/prebuilt/common/bin/whitelist:system/addon.d/whitelist
 
-
 # Dialer fix
 PRODUCT_COPY_FILES +=  \
     vendor/cardinal/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
@@ -88,13 +86,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     BluetoothExt \
     LatinIME \
-    libemoji \
     libsepol \
     e2fsck \
     mke2fs \
     tune2fs \
-    bash \
-    powertop \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat \
@@ -108,7 +103,6 @@ PRODUCT_PACKAGES += \
     micro_bench \
     oprofiled \
     sqlite3 \
-    strace \
 	libbthost_if \
 	WallpaperPicker
 
@@ -125,16 +119,6 @@ PRODUCT_PACKAGES += \
     font_log.png \
     libhealthd.cm
 endif
-
-# Stagefright FFMPEG plugin
-PRODUCT_PACKAGES += \
-    libffmpeg_extractor \
-    libffmpeg_omx \
-    media_codecs_ffmpeg.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # Telephony packages
 PRODUCT_PACKAGES += \
