@@ -112,12 +112,12 @@ PRODUCT_PACKAGES += \
     librsjni
 
 # Custom off-mode charger
-ifneq ($(WITH_CM_CHARGER),false)
+ifneq ($(WITH_CUSTOM_CHARGER),false)
 PRODUCT_PACKAGES += \
     charger_res_images \
-    cm_charger_res_images \
+    custom_charger_res_images \
     font_log.png \
-    libhealthd.cm
+    libhealthd.custom
 endif
 
 # Telephony packages
