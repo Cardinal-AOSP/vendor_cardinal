@@ -43,8 +43,8 @@
          so that applications can still use their own mechanisms. -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
-     <!-- Control whether Night display is available. This should only be enabled on devices
-          with HWC 2.0 or higher. -->
-     <bool name="config_nightDisplayAvailable">true</bool>
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
 
 </resources>
