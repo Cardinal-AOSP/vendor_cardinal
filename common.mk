@@ -179,7 +179,7 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 
 # Cardinal-AOSP version
 PLATFORM_VERSION_CODENAME := OREO
-CARDINAL_VERSION_CODENAME := 5.0-BETA
+CARDINAL_VERSION_CODENAME := 5.0
 ifdef CARDINAL_BUILD_EXTRA
     CARDINAL_POSTFIX := -$(CARDINAL_BUILD_EXTRA)
 endif
