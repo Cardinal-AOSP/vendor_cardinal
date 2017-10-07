@@ -181,6 +181,13 @@ endif
 
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
+# build official builds with private keys
+ifeq ($(CARDINAL_RELEASE),true)
+ifeq ($(TARGET_BUILD_VARIANT),user)
+include vendor/cardinal-priv/keys.mk
+endif
+endif
+
 # Cardinal-AOSP version
 PLATFORM_VERSION_CODENAME := OREO
 CARDINAL_VERSION_CODENAME := 5.0
