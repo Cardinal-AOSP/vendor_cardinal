@@ -52,6 +52,10 @@ PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
     vendor/cardinal/prebuilt/common/bin/whitelist:system/addon.d/whitelist
 
+# Signature compatibility validation
+PRODUCT_COPY_FILES += \
+    vendor/cardinal/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
+
 # Dialer fix
 PRODUCT_COPY_FILES +=  \
     vendor/cardinal/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
