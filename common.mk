@@ -21,8 +21,10 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.enable_rescue=false
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
+endif
 
 TARGET_BOOTANIMATION_400 := $(shell \
   if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
@@ -174,9 +176,11 @@ endif
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-# Enable ADB authentication
+# Enable ADB authentication for userdebug and eng builds
+ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
+else
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=0
 endif
 
 $(call inherit-product-if-exists, vendor/extra/product.mk)
