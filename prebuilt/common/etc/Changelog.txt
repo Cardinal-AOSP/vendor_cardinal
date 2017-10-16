@@ -1,0 +1,60 @@
+Changelog
+
+Wed, 18-10-2017
+================
+
+• Initial Release
+• Merged AOSP 8.0.0_r17
+• Allow lower temp for night light 
+• Add GApps permissions
+• Background app notification option
+• Unlock with fp directly after boot
+• Allow adjusting screen density to smaller sizes
+• Added QS Tiles: Adb over network, Caffeine, Screenshot, Reboot, Sound, Volume, PiP, Headsup, compass, Accidental touch
+• Lockscreen media art
+• L/R IME Cursors
+• Add/Remove tiles with one click
+• Night Light enhancements
+• QS Custom Column/Rows
+• Location tile enhancements
+• Enabled Always on Wifi
+• QS Tile titles visibality 
+• Statusbar network traffic meter
+• Accept All files over bluetooth option
+• IME selector notification toggle
+• Volume Adjustments Sound
+• Wake on plug
+• Add SystemUI Tuner features into Wings
+• Battery Light customizations
+• Notification light customizations
+• Dynamic HardwareKey/Softkey toggle
+• Custom Key rebinding
+• Button light customizations
+• Headsup Whitelist
+• Headsup Blacklist
+• Accidental touch
+• AppOps
+• Sensor block per-package
+• DT2S on Statusbar
+• Increase Zen mode max hour to 24hr
+• Option to Disable Home key when ringing
+• Support for Pause/Resume download 
+• Long press vol to skip tracks
+• Long press Settings button to launch Wings
+• Add long press actions for QS Date, edit button and user avatar 
+• Rotation lock 
+• DND Tile enhancements
+• VoLTE icon toggle
+• HSPA+ icon
+• Signature spoofing support for MicroG
+• Option to Disable QS and Bottom shortcuts on lockscreen
+• Added Adaptive icons to most of system apps
+• Enable Custom shapes option on Launcher3
+• Enable Developer option by default
+• Import Hindi (IN) translations
+• Reset Battery Stats 
+• Ship with Jelly browser
+• Fix DeskClock
+• Ship CardinalOTA app
+• Disabled RescueParty
+• Launcher3 Gestures 

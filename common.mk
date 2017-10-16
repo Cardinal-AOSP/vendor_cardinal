@@ -58,6 +58,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
+# Changelog
+ifeq ($(CARDINAL_RELEASE),true)
+PRODUCT_COPY_FILES +=  \
+    vendor/cardinal/prebuilt/common/etc/Changelog.txt:system/etc/Changelog.txt
+else
+GENERATE_CHANGELOG := true
+endif
+
 # Dialer fix
 PRODUCT_COPY_FILES +=  \
     vendor/cardinal/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
