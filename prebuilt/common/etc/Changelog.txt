@@ -5,10 +5,17 @@ Wed, 18-10-2017
 
 • Initial Release
 • Merged AOSP 8.0.0_r17
+• Inbuilt Pixel/Stock themes
+• Ringtones/Effects/Sounds from latest Pixel
+• Reboot/Recovery in powermenu
+• Google dialer Fix
+• Cardinal logo on statusbar
+• Allow installing non-market apps by default
 • Allow lower temp for night light 
 • Add GApps permissions
 • Background app notification option
 • Unlock with fp directly after boot
+• Fingerprint Success vibration 
 • Allow adjusting screen density to smaller sizes
 • Added QS Tiles: Adb over network, Caffeine, Screenshot, Reboot, Sound, Volume, PiP, Headsup, compass, Accidental touch
 • Lockscreen media art
@@ -18,7 +25,7 @@ Wed, 18-10-2017
 • QS Custom Column/Rows
 • Location tile enhancements
 • Enabled Always on Wifi
-• QS Tile titles visibality 
+• QS Tile titles visibility 
 • Statusbar network traffic meter
 • Accept All files over bluetooth option
 • IME selector notification toggle
@@ -32,6 +39,7 @@ Wed, 18-10-2017
 • Button light customizations
 • Headsup Whitelist
 • Headsup Blacklist
+• Headsup toggle
 • Accidental touch
 • AppOps
 • Sensor block per-package
@@ -55,6 +63,7 @@ Wed, 18-10-2017
 • Reset Battery Stats 
 • Ship with Jelly browser
 • Fix DeskClock
+• Fix Keyboard FC
 • Ship CardinalOTA app
 • Disabled RescueParty
 • Launcher3 Gestures 
