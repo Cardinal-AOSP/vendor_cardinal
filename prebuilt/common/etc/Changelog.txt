@@ -1,5 +1,6 @@
-Changelog
+Changelog:
 
+v5.0
 Wed, 18-10-2017
 ================
 
@@ -67,3 +68,4 @@ Wed, 18-10-2017
 • Ship CardinalOTA app
 • Disabled RescueParty
 • Launcher3 Gestures 
+• Screenshot sound toggle
