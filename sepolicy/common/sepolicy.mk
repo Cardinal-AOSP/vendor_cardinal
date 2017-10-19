@@ -3,5 +3,9 @@
 # inherit from Cardinal
 #
 
-BOARD_SEPOLICY_DIRS += \
-    vendor/cardinal/sepolicy/common
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+    vendor/cardinal/sepolicy/common/public
+
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    vendor/cardinal/sepolicy/common/private
+
