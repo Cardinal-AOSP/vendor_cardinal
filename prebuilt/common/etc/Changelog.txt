@@ -1,11 +1,9 @@
-Changelog:
-
-v5.0
-Wed, 18-10-2017
+v5.0 Wed, 20-10-2017
 ================
 
 • Initial Release
 • Merged AOSP 8.0.0_r17
+• Patched KRACK vulnerability
 • Inbuilt Pixel/Stock themes
 • Ringtones/Effects/Sounds from latest Pixel
 • Reboot/Recovery in powermenu
