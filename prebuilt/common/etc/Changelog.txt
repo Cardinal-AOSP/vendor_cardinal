@@ -1,4 +1,4 @@
-v5.0 Wed, 20-10-2017
+v5.0 Wed, 21-10-2017
 ================
 
 • Initial Release
@@ -67,3 +67,5 @@ v5.0 Wed, 20-10-2017
 • Disabled RescueParty
 • Launcher3 Gestures 
 • Screenshot sound toggle
+• Recents customizations
+• Pixel navigationbar animation
