@@ -68,4 +68,3 @@ v5.0 Wed, 21-10-2017
 • Launcher3 Gestures 
 • Screenshot sound toggle
 • Recents customizations
-• Pixel navigationbar animation
