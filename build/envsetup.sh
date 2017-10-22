@@ -7,7 +7,7 @@ Additional Cardinal-AOSP functions:
 - mmap:            Builds all of the modules in the current directory and its dependencies, then pushes the package to the device.
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
 - crdremote:       Add a git remote for Cardinal-AOSP github repository.
-- losremote:       Add git remote pointing to the LineageOS github repository.
+- lineageremote:   Add git remote pointing to the LineageOS github repository.
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
 - mka:             Builds using SCHED_BATCH on all processors.
@@ -22,7 +22,7 @@ Additional Cardinal-AOSP functions:
 EOF
 }
 
-function crd_device_combos()
+function cardinal_device_combos()
 {
     local T list_file variant device
 
@@ -106,7 +106,7 @@ function crdremote()
     echo "Remote 'crd' created"
 }
 
-function losremote()
+function lineageremote()
 {
     local proj pfx project
 
@@ -115,7 +115,7 @@ function losremote()
         echo "Not in a git directory. Please run this from an Android repository you wish to set up."
         return
     fi
-    git remote rm los 2> /dev/null
+    git remote rm lineage 2> /dev/null
 
     proj="$(pwd -P | sed "s#$ANDROID_BUILD_TOP/##g")"
     pfx="android_"
@@ -125,8 +125,8 @@ function losremote()
         project=${project%-caf*}
     fi
 
-    git remote add los "git@github.com:LineageOS/$pfx$project"
-    echo "Remote 'los' created"
+    git remote add lineage "git@github.com:LineageOS/$pfx$project"
+    echo "Remote 'lineage' created"
 }
 
 function aospremote()
@@ -251,7 +251,7 @@ function breakfast()
     CARDINAL_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
-    for f in `/bin/ls vendor/cardinal/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/cardinal/build/vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
