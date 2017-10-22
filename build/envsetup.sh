@@ -102,6 +102,10 @@ function crdremote()
 
     project="${proj//\//_}"
 
+    if (echo "$project" | egrep -q 'display-caf|audio-caf|media-caf|ril-caf|wlan-caf|bt-caf') ; then
+        project=${project%-caf*}
+    fi
+
     git remote add crd "git@github.com:Cardinal-AOSP/$project"
     echo "Remote 'crd' created"
 }
