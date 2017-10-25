@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := $(TOP)/vendor/cardinal/google/sounds
+LOCAL_PATH := $(ANDROID_BUILD_TOP)/vendor/cardinal/google/sounds
 
 # Alarm tones
 PRODUCT_COPY_FILES += \
