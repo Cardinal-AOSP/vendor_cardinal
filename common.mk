@@ -186,9 +186,6 @@ PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
 endif
 
-# by default, do not update the recovery with system updates
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
-
 # Enable ADB authentication for userdebug and eng builds
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
@@ -203,8 +200,8 @@ ifeq ($(CARDINAL_RELEASE),true)
 include vendor/cardinal-priv/keys.mk
 endif
 
-# Cardinal-AOSP version
-PLATFORM_VERSION_CODENAME := OREO
+# Cardinal-AOSP versioning system
+AOSP_VERSION_CODENAME := OREO
 CARDINAL_VERSION_CODENAME := 5.0
 ifdef CARDINAL_BUILD_EXTRA
     CARDINAL_POSTFIX := -$(CARDINAL_BUILD_EXTRA)
@@ -228,8 +225,8 @@ ifndef CARDINAL_POSTFIX
 endif
 
 # Set all versions
-CARDINAL_VERSION := Cardinal-AOSP-$(CARDINAL_VERSION_CODENAME)-$(PLATFORM_VERSION_CODENAME)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
-CARDINAL_MOD_VERSION := Cardinal-AOSP-$(CARDINAL_VERSION_CODENAME)-$(PLATFORM_VERSION_CODENAME)-$(CARDINAL_BUILD)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
+CARDINAL_VERSION := Cardinal-AOSP-$(CARDINAL_VERSION_CODENAME)-$(AOSP_VERSION_CODENAME)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
+CARDINAL_MOD_VERSION := Cardinal-AOSP-$(CARDINAL_VERSION_CODENAME)-$(AOSP_VERSION_CODENAME)-$(CARDINAL_BUILD)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     cardinal.ota.version=$(CARDINAL_MOD_VERSION) \
