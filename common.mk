@@ -11,23 +11,31 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.mobiledata=false \
     ro.setupwizard.rotation_locked=true
 
-
 # Mark as eligible for Google Assistant
 PRODUCT_PROPERTY_OVERRIDES += ro.opa.eligible_device=true
 
-# RecueParty? No thanks.
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.enable_rescue=false
-
+# Show SELinux preference in Settings->System->About phone
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
+# RecueParty? No thanks.
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.enable_rescue=false
 endif
 
+# Include low res bootanimation if display is equal or less then 720p
 TARGET_BOOTANIMATION_400 := $(shell \
   if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
+    echo 'true'; \
+  else \
+    echo ''; \
+  fi )
+
+# Include High res bootanimation if display is greater then 1080p
+TARGET_BOOTANIMATION_1200 := $(shell \
+  if [ $(TARGET_SCREEN_WIDTH) -gt 1080 ]; then \
     echo 'true'; \
   else \
     echo ''; \
@@ -66,12 +74,9 @@ else
 GENERATE_CHANGELOG := true
 endif
 
-# Dialer fix
+# Google Dialer fix
 PRODUCT_COPY_FILES +=  \
     vendor/cardinal/prebuilt/common/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
-
-# Include LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/cardinal/overlay/dictionaries
 
 # init.d support
 PRODUCT_COPY_FILES += \
@@ -150,7 +155,6 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     messaging \
     Jelly \
-    CardinalOTA \
     ExactCalculator \
     Turbo
 
@@ -159,6 +163,11 @@ PRODUCT_PACKAGES += \
     PixelTheme \
     Stock
 
+# Build OTA app on official builds
+ifeq ($(CARDINAL_RELEASE),true)
+PRODUCT_PACKAGES += CardinalOTA
+endif
+
 # World APN list
 PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
@@ -166,9 +175,6 @@ PRODUCT_COPY_FILES += \
 # Selective SPN list for operator number who has the problem.
 PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
-
-# easy way to extend to add more packages
--include vendor/extra/product.mk
 
 # Overlays & Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += \
@@ -186,16 +192,14 @@ PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
 endif
 
-# Enable ADB authentication for userdebug and eng builds
+# Enable Secure ADB authentication for user builds
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
 else
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=0
 endif
 
-$(call inherit-product-if-exists, vendor/extra/product.mk)
-
-# build official builds with private keys
+# Build official builds with private keys
 ifeq ($(CARDINAL_RELEASE),true)
 include vendor/cardinal-priv/keys.mk
 endif
@@ -203,30 +207,30 @@ endif
 # Cardinal-AOSP versioning system
 AOSP_VERSION_CODENAME := OREO
 CARDINAL_VERSION_CODENAME := 5.0
-ifdef CARDINAL_BUILD_EXTRA
-    CARDINAL_POSTFIX := -$(CARDINAL_BUILD_EXTRA)
-endif
 ifndef CARDINAL_BUILD_TYPE
 ifeq ($(CARDINAL_RELEASE),true)
     CARDINAL_BUILD_TYPE := OFFICIAL
     CARDINAL_POSTFIX := -$(shell date +"%Y%m%d")
 else
     CARDINAL_BUILD_TYPE := UNOFFICIAL
-    CARDINAL_POSTFIX := -$(shell date +"%Y%m%d")
 endif
 endif
 
-ifeq ($(CARDINAL_BUILD_TYPE),DM)
-    CARDINAL_POSTFIX := -$(shell date +"%Y%m%d")
+# Use CARDINAL_BUILD_EXTRA as postfix if defined  (non-release/unofficial builds)
+ifdef CARDINAL_BUILD_EXTRA
+    CARDINAL_POSTFIX := -$(CARDINAL_BUILD_EXTRA)
 endif
 
+# Append time if postfix not defined (non-release/unofficial builds)
 ifndef CARDINAL_POSTFIX
-    CARDINAL_POSTFIX := -$(shell date +"%Y%m%d")
+    CARDINAL_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
 endif
 
-# Set all versions
+# Output zip naming
 CARDINAL_VERSION := Cardinal-AOSP-$(CARDINAL_VERSION_CODENAME)-$(AOSP_VERSION_CODENAME)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
 CARDINAL_MOD_VERSION := Cardinal-AOSP-$(CARDINAL_VERSION_CODENAME)-$(AOSP_VERSION_CODENAME)-$(CARDINAL_BUILD)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
+
+# Cardinal sprcific build properties
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     cardinal.ota.version=$(CARDINAL_MOD_VERSION) \
@@ -241,3 +245,6 @@ else
   PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.device.cache_dir=/cache
 endif
+
+# Easy way to extend to add more packages
+$(call inherit-product-if-exists, vendor/extra/product.mk)
