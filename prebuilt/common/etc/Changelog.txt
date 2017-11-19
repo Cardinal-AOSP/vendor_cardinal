@@ -1,3 +1,15 @@
+v5.1 Sun, 19-11-2017
+================
+
+• Merged November security patch 8.0.0_r32
+• Added substratum shortcut in settings
+• Navbar dynamic skip tracks/keyboard arrows
+• Pixel navbar animation
+• Import translations from crowdin
+• Fixed lock screen settings fc on device without fingerprint sensor
+• Rebased CardinalOTA app from Satyabrat
+• Add our own theme Margarita
+
 v5.0 Wed, 21-10-2017
 ================
 
