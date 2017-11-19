@@ -161,7 +161,8 @@ PRODUCT_PACKAGES += \
 # Themes
 PRODUCT_PACKAGES += \
     PixelTheme \
-    Stock
+    Stock \
+    Margarita
 
 # Build OTA app on official builds
 ifeq ($(CARDINAL_RELEASE),true)
