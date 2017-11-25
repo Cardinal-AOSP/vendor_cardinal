@@ -171,6 +171,10 @@ PRODUCT_PACKAGES += \
     Stock \
     Margarita
 
+# Substratum
+PRODUCT_PACKAGES += SubstratumService
+PRODUCT_SYSTEM_SERVER_APPS += SubstratumService
+
 # MusicFX
 PRODUCT_PACKAGES += \
     MusicFX \
