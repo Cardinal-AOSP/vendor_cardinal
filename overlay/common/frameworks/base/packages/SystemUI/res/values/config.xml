@@ -26,4 +26,14 @@
     <bool name="config_show4GForLTE">false</bool>
 
     <bool name="quick_settings_show_full_alarm">true</bool>
+
+    <!-- Snooze: List of snooze values in integer minutes. -->
+    <integer-array name="config_notification_snooze_times">
+        <item>5</item>
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+    </integer-array>
+
 </resources>
