@@ -153,7 +153,7 @@ PRODUCT_PACKAGES += \
     Camera2 \
     Launcher3 \
     messaging \
-    Jelly \
+    LighteningBrowser \
     ExactCalculator \
     Turbo
 
