@@ -15,6 +15,12 @@
 
 LOCAL_PATH := $(ANDROID_BUILD_TOP)/vendor/cardinal/google/sounds
 
+# Defaults
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.config.ringtone=The_big_adventure.ogg \
+    ro.config.notification_sound=Popcorn.ogg \
+    ro.config.alarm_alert=Bright_morning.ogg
+
 # Alarm tones
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/alarms,system/media/audio/alarms)

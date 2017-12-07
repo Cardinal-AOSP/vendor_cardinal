@@ -250,5 +250,9 @@ else
     ro.device.cache_dir=/cache
 endif
 
+
+# include sounds from pixel
+$(call inherit-product-if-exists, vendor/cardinal/google/sounds/PixelSounds.mk)
+
 # Easy way to extend to add more packages
 $(call inherit-product-if-exists, vendor/extra/product.mk)
