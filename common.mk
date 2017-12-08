@@ -160,12 +160,13 @@ PRODUCT_PACKAGES += \
 # Themes
 PRODUCT_PACKAGES += \
     PixelTheme \
-    Stock \
-    Margarita
+    Stock
 
-# Build OTA app on official builds
+# Build OTA and Margarita on official builds
 ifeq ($(CARDINAL_RELEASE),true)
-PRODUCT_PACKAGES += CardinalOTA
+PRODUCT_PACKAGES += \
+    CardinalOTA \
+    Margarita
 endif
 
 # World APN list
