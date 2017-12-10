@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017 Cardinal-AOSP
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Adaptive icon -->
+    <color name="icon_background">@color/primaryColor</color>
+
+    <!-- Main app color -->
+    <color name="primaryColor">#37474f</color>
+    <color name="primaryColorDark">#263238</color>
+    <color name="accentColor">#00c853</color>
+    <color name="drawer_menu_icon_checked_color">@color/accentColor</color> <!-- left drawer menu checked element icon color-->
+    <color name="drawer_menu_text_checked_color">@color/accentColor</color> <!-- left drawer menu checked element txt color-->
+    <color name="highlight_gallery_text">@color/primaryColor</color> <!-- eq presets text color when musicfx is on for the current selected preset -->
+    <color name="knob_current_level">#00e676</color> <!-- knobs level and percentage level inside the knob - - - inner part of the knobs is png drawable--> 
+    <color name="current_out_source">@color/accentColor</color> <!-- the bar with the current active out source icon and name --> 
+    <color name="visualizer_highlight">@color/accentColor</color> <!-- equalizer active level bar top element  -->
+    <color name="visualizer_lowlight">#00e676</color> <!-- equalizer active level bar elements -->
+</resources>
