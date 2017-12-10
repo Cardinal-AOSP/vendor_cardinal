@@ -162,6 +162,12 @@ PRODUCT_PACKAGES += \
     PixelTheme \
     Stock
 
+# MusicFX
+PRODUCT_PACKAGES += \
+    MusicFX \
+    audio_effects.conf \
+    libcyanogen-dsp
+
 # Build OTA and Margarita on official builds
 ifeq ($(CARDINAL_RELEASE),true)
 PRODUCT_PACKAGES += \
