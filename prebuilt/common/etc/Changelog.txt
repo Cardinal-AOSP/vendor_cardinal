@@ -1,11 +1,30 @@
+
+v5.2 Wed, 13-12-2017
+====================
+
+• Rebased to 8.1
+• Better theming capability
+• Removed pixel navbar animation
+• Removed fp vibration option
+• Replaced Jelly to Lightning browser
+• Import sounds from both Pixel 2 and 2 XL
+• Margarita theme updates
+• Lockscreen charging info
+• Quick unlock on pin/password
+• Added MusicFX
+• Added screen off action to button actions
+• Ability to kill app from recents
+• Notification ticker
+• Unlink notification/ringtone volume
+
 v5.1.1 Mon, 20-11-2017
-=============
+======================
 
 • Fix pixel navbar home button long press action
 • Fix CardinalOTA fc on back button press
 
 v5.1 Sun, 19-11-2017
-================
+====================
 
 • Merged November security patch 8.0.0_r32
 • Added substratum shortcut in settings
@@ -17,7 +36,7 @@ v5.1 Sun, 19-11-2017
 • Add our own theme Margarita
 
 v5.0 Wed, 21-10-2017
-================
+====================
 
 • Initial Release
 • Merged AOSP 8.0.0_r17
