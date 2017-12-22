@@ -160,7 +160,8 @@ PRODUCT_PACKAGES += \
 # Themes
 PRODUCT_PACKAGES += \
     PixelTheme \
-    Stock
+    Stock \
+    Margarita
 
 # MusicFX
 PRODUCT_PACKAGES += \
@@ -170,9 +171,7 @@ PRODUCT_PACKAGES += \
 
 # Build OTA and Margarita on official builds
 ifeq ($(CARDINAL_RELEASE),true)
-PRODUCT_PACKAGES += \
-    CardinalOTA \
-    Margarita
+PRODUCT_PACKAGES += CardinalOTA
 endif
 
 # World APN list
