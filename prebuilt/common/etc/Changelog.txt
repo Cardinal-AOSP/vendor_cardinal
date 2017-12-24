@@ -1,3 +1,19 @@
+v5.3 Mon, 25-12-2017
+====================
+
+• Merged tag android-8.1.0_r2
+• Updated qcom repo's to LA.UM.6.4.r1-05400-8x98.0
+• Added back Fingerprint vibration toggle
+• Ticker fixes
+• More exposures for theming
+• Notification light customizations
+• Unified Headsup and ticker settings
+• Redesigned VoLTE icon
+• Configurable SystemUI theme (Wallpaper based, light, dark)
+• Rotation settings
+• Fixed Lockscreen and dialer swipe issues
+• Fixed button light lighting up randomly
+• Updated Margarita theme
 
 v5.2 Wed, 13-12-2017
 ====================
