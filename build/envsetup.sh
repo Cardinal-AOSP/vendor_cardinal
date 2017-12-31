@@ -106,7 +106,7 @@ function crdremote()
         project=${project%-caf*}
     fi
 
-    git remote add crd "git@github.com:Cardinal-AOSP/$project"
+    git remote add crd "https://github.com/Cardinal-AOSP/$project"
     echo "Remote 'crd' created"
 }
 
@@ -129,7 +129,7 @@ function lineageremote()
         project=${project%-caf*}
     fi
 
-    git remote add lineage "git@github.com:LineageOS/$pfx$project"
+    git remote add lineage "https://github.com/LineageOS/$pfx$project"
     echo "Remote 'lineage' created"
 }
 
@@ -163,15 +163,14 @@ function cafremote()
     then
         PFX="platform/"
     fi
-    git remote add caf git://codeaurora.org/$PFX$PROJECT
+    git remote add caf https://source.codeaurora.org/quic/la/$PFX$PROJECT
     echo "Remote 'caf' created"
 }
 
-function crd_push()
+function crdpush()
 {
-    local branch ssh_name path_opt proj
-    branch="n-mr2"
-    ssh_name="cardinal"
+    local branch path_opt proj
+    branch="oreo-mr1"
     path_opt=
 
     if [[ "$1" ]]
@@ -189,7 +188,7 @@ function crd_push()
         proj="$proj"
     fi
 
-    git $path_opt push "ssh://${ssh_name}/Cardinal-AOSP/$proj" "HEAD:refs/for/$branch"
+    git $path_opt push "https://github.com/Cardinal-AOSP/$proj" "HEAD:$branch"
 }
 
 
