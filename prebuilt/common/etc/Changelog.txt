@@ -1,3 +1,15 @@
+
+v5.3.1 Wed, 03-01-2018
+======================
+
+• Merged 8.1.0_r7 
+• Merged translations
+• Mobile data always on disabled by default
+• Append app name to screenshot file name
+• Reboot menu overhaul
+• New default Wallpaper
+• Margarita updates
+
 v5.3 Mon, 25-12-2017
 ====================
 
