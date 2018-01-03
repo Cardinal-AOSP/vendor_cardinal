@@ -65,6 +65,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
+# Clean up packages cache to avoid wrong strings and resources
+PRODUCT_COPY_FILES += \
+    vendor/cardinal/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+
 # Changelog
 ifeq ($(CARDINAL_RELEASE),true)
 PRODUCT_COPY_FILES +=  \
