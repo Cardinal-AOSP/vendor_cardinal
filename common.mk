@@ -24,6 +24,11 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.enable_rescue=false
 endif
 
+# Tethering - allow without requiring a provisioning app
+# (for devices that check this)
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.tethering.noprovisioning=true
+
 # Include low res bootanimation if display is equal or less then 720p
 TARGET_BOOTANIMATION_400 := $(shell \
   if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
