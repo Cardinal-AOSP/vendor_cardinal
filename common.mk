@@ -29,6 +29,10 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.recorder.show_manufacturer_and_model=true
+
 # Include low res bootanimation if display is equal or less then 720p
 TARGET_BOOTANIMATION_400 := $(shell \
   if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
