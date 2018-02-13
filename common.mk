@@ -142,15 +142,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
 
-# Custom off-mode charger
-ifneq ($(WITH_CUSTOM_CHARGER),false)
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    custom_charger_res_images \
-    font_log.png \
-    libhealthd.custom
-endif
-
 # Telephony packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
@@ -256,7 +247,6 @@ else
   PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.device.cache_dir=/cache
 endif
-
 
 # include sounds from pixel
 $(call inherit-product-if-exists, vendor/cardinal/google/sounds/PixelSounds.mk)
