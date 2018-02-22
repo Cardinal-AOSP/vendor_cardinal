@@ -121,7 +121,6 @@ PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs \
-    mount.exfat \
     fsck.exfat \
     mkfs.exfat \
     mkfs.f2fs \
@@ -146,7 +145,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Stk \
-    
+
 # Mms depends on SoundRecorder for recorded audio messages
 PRODUCT_PACKAGES += \
     SoundRecorder
