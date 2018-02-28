@@ -12,7 +12,7 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Adaptive icon -->
-    <color name="icon_background">@color/primaryColor</color>
+    <color name="ic_launcher_background">@color/primaryColor</color>
 
     <!-- Main app color -->
     <color name="primaryColor">#37474f</color>
@@ -21,8 +21,8 @@
     <color name="drawer_menu_icon_checked_color">@color/accentColor</color> <!-- left drawer menu checked element icon color-->
     <color name="drawer_menu_text_checked_color">@color/accentColor</color> <!-- left drawer menu checked element txt color-->
     <color name="highlight_gallery_text">@color/primaryColor</color> <!-- eq presets text color when musicfx is on for the current selected preset -->
-    <color name="knob_current_level">#00e676</color> <!-- knobs level and percentage level inside the knob - - - inner part of the knobs is png drawable--> 
-    <color name="current_out_source">@color/accentColor</color> <!-- the bar with the current active out source icon and name --> 
+    <color name="knob_current_level">#00e676</color> <!-- knobs level and percentage level inside the knob - - - inner part of the knobs is png drawable-->
+    <color name="current_out_source">@color/accentColor</color> <!-- the bar with the current active out source icon and name -->
     <color name="visualizer_highlight">@color/accentColor</color> <!-- equalizer active level bar top element  -->
     <color name="visualizer_lowlight">#00e676</color> <!-- equalizer active level bar elements -->
 </resources>
