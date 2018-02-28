@@ -24,6 +24,11 @@ PRODUCT_GENERIC_PROPERTIES += persist.sys.dun.override=0
 PRODUCT_GENERIC_PROPERTIES += persist.sys.enable_rescue=false
 endif
 
+# enable ADB authentication if not on eng build
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
+endif
+
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)
 PRODUCT_GENERIC_PROPERTIES += \
