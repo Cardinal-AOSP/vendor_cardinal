@@ -1,8 +1,39 @@
 
+v5.4 Thu, 01-03-2018
+====================
+
+• Merges 8.1.0_r14
+• Merged translations
+• Sepolicy updates
+• Power HAL updates
+• Battery styles
+• Expanded desktop
+• Added support for SIM Manual provisioning
+• Merged latest Substratum exposures
+• Swap hardware recent and back keys toggle
+• Quick face unlock support
+• Merged Snap camera changes from LineageOS
+• Switched to Amir's Launcher3
+• Show infinity on large notification count
+• More descriptive vendor image mismatch message
+• Smart notofication sound
+• option to allow supress notification if media playing
+• Option to use power buttton for toggle flashlight
+• Option to disable powermenu in secure lock screen
+• Added VPN, Data saver icon to statusbar icons Blacklist
+• Scrolling cache option
+• Option to disable QS footer warnings
+• Scramble pin layout
+• 4G/LTE Switch
+• Fixed Cardinal logo on white statusbar
+• Ticker improvements
+• Package name in app info screen
+• Margarita theme updates
+
 v5.3.1 Wed, 03-01-2018
 ======================
 
-• Merged 8.1.0_r7 
+• Merged 8.1.0_r7
 • Merged translations
 • Mobile data always on disabled by default
 • Append app name to screenshot file name
@@ -75,11 +106,11 @@ v5.0 Wed, 21-10-2017
 • Google dialer Fix
 • Cardinal logo on statusbar
 • Allow installing non-market apps by default
-• Allow lower temp for night light 
+• Allow lower temp for night light
 • Add GApps permissions
 • Background app notification option
 • Unlock with fp directly after boot
-• Fingerprint Success vibration 
+• Fingerprint Success vibration
 • Allow adjusting screen density to smaller sizes
 • Added QS Tiles: Adb over network, Caffeine, Screenshot, Reboot, Sound, Volume, PiP, Headsup, compass, Accidental touch
 • Lockscreen media art
@@ -89,7 +120,7 @@ v5.0 Wed, 21-10-2017
 • QS Custom Column/Rows
 • Location tile enhancements
 • Enabled Always on Wifi
-• QS Tile titles visibility 
+• QS Tile titles visibility
 • Statusbar network traffic meter
 • Accept All files over bluetooth option
 • IME selector notification toggle
@@ -110,11 +141,11 @@ v5.0 Wed, 21-10-2017
 • DT2S on Statusbar
 • Increase Zen mode max hour to 24hr
 • Option to Disable Home key when ringing
-• Support for Pause/Resume download 
+• Support for Pause/Resume download
 • Long press vol to skip tracks
 • Long press Settings button to launch Wings
-• Add long press actions for QS Date, edit button and user avatar 
-• Rotation lock 
+• Add long press actions for QS Date, edit button and user avatar
+• Rotation lock
 • DND Tile enhancements
 • VoLTE icon toggle
 • HSPA+ icon
@@ -124,12 +155,12 @@ v5.0 Wed, 21-10-2017
 • Enable Custom shapes option on Launcher3
 • Enable Developer option by default
 • Import Hindi (IN) translations
-• Reset Battery Stats 
+• Reset Battery Stats
 • Ship with Jelly browser
 • Fix DeskClock
 • Fix Keyboard FC
 • Ship CardinalOTA app
 • Disabled RescueParty
-• Launcher3 Gestures 
+• Launcher3 Gestures
 • Screenshot sound toggle
 • Recents customizations
