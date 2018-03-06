@@ -1,8 +1,15 @@
+v5.4.1 Tue, 06-03-2018
+======================
+• Merged 8.1.0_r18
+• Added sync tile
+• Auto brightness icon toggle
+• Added exFat support
+• Margarita theme updates
 
 v5.4 Thu, 01-03-2018
 ====================
 
-• Merges 8.1.0_r14
+• Merged 8.1.0_r14
 • Merged translations
 • Sepolicy updates
 • Power HAL updates
