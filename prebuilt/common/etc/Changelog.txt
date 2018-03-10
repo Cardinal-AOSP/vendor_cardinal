@@ -1,3 +1,13 @@
+v5.4.2 Sat, 10-03-2018
+======================
+• Burn-in protection
+• Revert OMS changes Introduced in March update which was breaking Substratum
+• Ambient: Show battery level on bottom
+• Use ⚡ instead of ~ in battery percentage text mode
+• Ticker improvements
+• Updated CAF Repos to LA.UM.6.4.r1-06900-8x98
+• Fixed FC after changing SIM color
+
 v5.4.1 Tue, 06-03-2018
 ======================
 • Merged 8.1.0_r18
