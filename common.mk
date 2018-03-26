@@ -1,6 +1,6 @@
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     keyguard.no_require_sim=true \
     ro.com.google.clientidbase=android-google \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -11,17 +11,17 @@ PRODUCT_GENERIC_PROPERTIES += \
     ro.setupwizard.rotation_locked=true
 
 # Mark as eligible for Google Assistant
-PRODUCT_GENERIC_PROPERTIES += ro.opa.eligible_device=true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.opa.eligible_device=true
 
 # Show SELinux preference in Settings->System->About phone
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.selinux=1
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
-PRODUCT_GENERIC_PROPERTIES += persist.sys.dun.override=0
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
 # RecueParty? No thanks.
-PRODUCT_GENERIC_PROPERTIES += persist.sys.enable_rescue=false
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.enable_rescue=false
 endif
 
 # enable ADB authentication if not on eng build
@@ -31,11 +31,11 @@ endif
 
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     net.tethering.noprovisioning=true
 
 # Media
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
 # Include low res bootanimation if display is equal or less then 720p
@@ -237,7 +237,7 @@ CARDINAL_MOD_VERSION := Cardinal-AOSP-$(CARDINAL_VERSION_CODENAME)-$(AOSP_VERSIO
 endif
 
 # Cardinal sprcific build properties
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     cardinal.ota.version=$(CARDINAL_MOD_VERSION) \
     ro.cardinal.version=$(CARDINAL_VERSION_CODENAME) \
