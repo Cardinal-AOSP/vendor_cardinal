@@ -138,8 +138,8 @@ PRODUCT_PACKAGES += \
     micro_bench \
     oprofiled \
     sqlite3 \
-	libbthost_if \
-	WallpaperPicker
+    libbthost_if \
+    WallpaperPicker
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
