@@ -1,3 +1,24 @@
+v5.5 Fri, 6-04-2018
+=====================
+• Merged AOSP tag android-8.1.0_r20
+• Merged Substratum System Service changes (Fonts, Bootanimations, Sounds)
+• Added qs tile to toggle between Hw/Sw keys
+• Exposed Scren pinning colors for themes
+• Exposed tooltip text colors for themes
+• Fix theming of QS expand/collapse icon
+• Enhanced call blocking support
+• Dialer number lookup
+• Added scheduled notification to CardinalOTA
+• Use autobrightness for Ambient display
+• Option to choose Ticker styles (Scroll/Fade)
+• Qs content padding fix
+• Redesigned QC-FM2 radio app
+• AOSP keyboard improvements
+• Margarita theme updates
+• Merged latest Launcher3 changes from Amir (v3.4)
+• Merged translations
+• Minor under-the-hood changes
+
 v5.4.2 Sat, 10-03-2018
 ======================
 • Burn-in protection
