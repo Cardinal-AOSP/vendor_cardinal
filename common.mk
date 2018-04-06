@@ -181,9 +181,10 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     libcyanogen-dsp
 
-# Build OTA and Margarita on official builds
+# Build OTA and private keys for official builds
 ifeq ($(CARDINAL_RELEASE),true)
 PRODUCT_PACKAGES += CardinalOTA
+include vendor/cardinal-priv/keys.mk
 endif
 
 # World APN list
@@ -203,11 +204,6 @@ else
 PRODUCT_COPY_FILES += \
     vendor/cardinal/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
     vendor/cardinal/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
-endif
-
-# Build official builds with private keys
-ifeq ($(CARDINAL_RELEASE),true)
-include vendor/cardinal-priv/keys.mk
 endif
 
 # Cardinal-AOSP versioning system
