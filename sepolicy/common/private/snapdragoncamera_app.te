@@ -1,0 +1,31 @@
+app_domain(snapdragoncamera_app)
+net_domain(snapdragoncamera_app)
+
+# Access standard system services
+allow snapdragoncamera_app app_api_service:service_manager find;
+allow snapdragoncamera_app audioserver_service:service_manager find;
+allow snapdragoncamera_app cameraserver_service:service_manager find;
+allow snapdragoncamera_app drmserver_service:service_manager find;
+allow snapdragoncamera_app mediacodec_service:service_manager find;
+allow snapdragoncamera_app mediaextractor_service:service_manager find;
+allow snapdragoncamera_app mediaserver_service:service_manager find;
+allow snapdragoncamera_app mediametrics_service:service_manager find;
+allow snapdragoncamera_app nfc_service:service_manager find;
+allow snapdragoncamera_app surfaceflinger_service:service_manager find;
+
+allow snapdragoncamera_app hidl_token_hwservice:hwservice_manager find;
+
+# Allow to read and execute camera app modules
+allow snapdragoncamera_app vendor_file:file { rx_file_perms };
+
+# Execute libraries from RenderScript cache
+allow snapdragoncamera_app app_data_file:file { rx_file_perms };
+
+# Read memory info
+allow snapdragoncamera_app proc_meminfo:file r_file_perms;
+
+# gdbserver / stack traces
+allow snapdragoncamera_app self:process ptrace;
+
+# Read and write system app data files passed over Binder.
+allow snapdragoncamera_app system_app_data_file:file { read write getattr };
