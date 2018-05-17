@@ -1,5 +1,26 @@
+v5.6 Thu, 17-05-2018
+====================
+• Merged AOSP tag android-8.1.0_r28
+• Merged translations from crowdin
+• Added Clock and date customization
+• Added Cpu info overlay
+• Added Always-on-display QS tile
+• Added toggle for proximity Wake
+• Added search bar to Apps & notification and Battery optimization screen
+• Added Suspend actions
+• Added Per-app cellular data and wifi restruction
+• Added Ambient display music ticker
+• Added some ringtones
+• Added double tap to sleep on lockscreen
+• Updated APN's from OOS
+• Updated Margarita theme
+• Ticker improvements
+• Volume skip track improvements
+• Fixed issues with ADB
+• Moved Quick face unlock toggle to Wings
+
 v5.5 Fri, 6-04-2018
-=====================
+====================
 • Merged AOSP tag android-8.1.0_r20
 • Merged Substratum System Service changes (Fonts, Bootanimations, Sounds)
 • Added qs tile to toggle between Hw/Sw keys
