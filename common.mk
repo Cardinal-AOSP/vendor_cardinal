@@ -236,14 +236,6 @@ else
 CARDINAL_MOD_VERSION := Cardinal-AOSP-$(CARDINAL_VERSION_CODENAME)-$(AOSP_VERSION_CODENAME)-$(CARDINAL_BUILD)-$(CARDINAL_BUILD_TYPE)$(CARDINAL_POSTFIX)
 endif
 
-# Cardinal sprcific build properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    BUILD_DISPLAY_ID=$(BUILD_ID) \
-    cardinal.ota.version=$(CARDINAL_MOD_VERSION) \
-    ro.cardinal.version=$(CARDINAL_VERSION_CODENAME) \
-    ro.modversion=$(CARDINAL_MOD_VERSION) \
-    ro.cardinal.buildtype=$(CARDINAL_BUILD_TYPE)
-
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
   PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.device.cache_dir=/data/cache
