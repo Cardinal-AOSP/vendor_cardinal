@@ -1,4 +1,16 @@
+v5.6.2 Thurs, 21-06-2018
+========================
+• Merged AOSP tag android-8.1.0_r32
+• Ambient music ticker improvements
+• Added notification counter options
+• Added power off option to reboot tile
+• Switched to Ezio's Launcher3
+• Exposed QS tiles tint for themes
+• Exposed fastscroll text color for themes
+• Margarita updates
+
 v5.6.1 Sun, 27-05-2018
+======================
 • Fixed vol button skip tracks
 • Fixed Secured QS panel
 • Fixed center clock visibility after theme change
