@@ -10,4 +10,4 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
     vendor/cardinal/sepolicy/common/private
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/citrus/sepolicy/common/vendor
+    vendor/cardinal/sepolicy/common/vendor
