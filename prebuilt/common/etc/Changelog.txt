@@ -1,3 +1,14 @@
+v5.7.0 Mon, 9-07-2018
+===================
+• Merged AOSP tag android-8.1.0_r40
+• Hide signal icons for Disabled SIM
+• Exposed QS Tiles unavailable color for themes
+• Fixed issues when importing Contacts from .vcf
+• Added Live volume steps
+• Imported translations from crowdin
+• Margarita updated to v6.5.0
+• Misc fixes and improvements
+
 v5.6.3 Wed, 27-06-2018
 ======================
 • Added Carrier label customization
