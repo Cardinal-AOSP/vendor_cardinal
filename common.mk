@@ -178,7 +178,7 @@ PRODUCT_SYSTEM_SERVER_APPS += SubstratumService
 # MusicFX
 PRODUCT_PACKAGES += \
     MusicFX \
-    audio_effects.conf \
+    audio_effects.xml \
     libcyanogen-dsp
 
 # Build OTA and private keys for official builds
