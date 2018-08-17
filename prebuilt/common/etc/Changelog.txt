@@ -1,5 +1,17 @@
+v5.8.0 Fri, 17-08-2018
+======================
+• Merged Augest AOSP security patch (android-8.1.0_r43)
+• Merged latest translations from crowdin
+• Merged latest Launcher3 changes from ezio84 and Amir
+• Added option to use Media volume as default
+• Added option to control brightness from Statusbar
+• Added options for Call recording
+• Fixed battery percentage disappearing issue after low battery
+• Fixed some issues with CardinalOTA
+• Updated Margarita Substratum theme to v6.5.5
+
 v5.7.0 Mon, 9-07-2018
-===================
+=====================
 • Merged AOSP tag android-8.1.0_r40
 • Hide signal icons for Disabled SIM
 • Exposed QS Tiles unavailable color for themes
@@ -17,7 +29,7 @@ v5.6.3 Wed, 27-06-2018
 • Removed duplicate volume QS tile
 • Margarita updated to v6.1.0
 
-v5.6.2 Thurs, 21-06-2018
+v5.6.2 Thu, 21-06-2018
 ========================
 • Merged AOSP tag android-8.1.0_r32
 • Ambient music ticker improvements
