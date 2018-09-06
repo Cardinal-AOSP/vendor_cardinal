@@ -1,3 +1,7 @@
+v5.8.1 Fri, 7-09-2018
+=====================
+• Merged September AOSP security patch (android-8.1.0_r46)
+
 v5.8.0 Fri, 17-08-2018
 ======================
 • Merged Augest AOSP security patch (android-8.1.0_r43)
